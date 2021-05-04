@@ -1,7 +1,7 @@
 # Covid Resources App
 <img src="media/a.jpg" width="200"> <img src="media/b.jpg" width="200">
 
-**Covid Resources App** is an app which fetches latest data from twitter about the covid resources like **Oxygen**, **Ventilators** etc . Feel free to use it in your projects.
+**Covid Resources App** is an app which fetches latest data from twitter about the covid resources like **Oxygen**, **Ventilators** etc . Feel free to create PRs.
 
 ## About
 It has two screens - **Search Screen** & **Resources Screen**. On search screen, users can search for required resources and on other screen, the list will show up. Users can easily share using other apps, 

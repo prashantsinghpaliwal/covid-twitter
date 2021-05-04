@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="WhiteAccent">
+        <item name="colorAccent">@color/green_700</item> <!-- Whatever color you want-->
+    </style>
+
+</resources>

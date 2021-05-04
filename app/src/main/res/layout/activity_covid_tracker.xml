@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".ui.search.CovidTrackerActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/city_name_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter city name"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_baseline_location_on_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/Body1.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/quick_locations_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/city_name_input"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_location" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/beds_checkbox"
+        style="@style/Body1.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:buttonTint="@color/green_500"
+        android:text="Beds"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quick_locations_list" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/icu_checkbox"
+        style="@style/Body1.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:buttonTint="@color/green_500"
+        android:text="ICU"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/quick_locations_list" />
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/oxygen_checkbox"
+        style="@style/Body1.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/green_500"
+        android:text="Oxygen"
+
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/beds_checkbox" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/ventilator_checkbox"
+        style="@style/Body1.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:buttonTint="@color/green_500"
+        android:text="Ventilator"
+
+        android:textSize="16sp"
+
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/icu_checkbox" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/faviflu_checkbox"
+        style="@style/Body1.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/green_500"
+        android:text="Fabiflu"
+
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/oxygen_checkbox" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/remdesivir_checkbox"
+        style="@style/Body1.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:buttonTint="@color/green_500"
+        android:text="Remdesivir"
+
+        android:textSize="16sp"
+
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/ventilator_checkbox" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/plasma_checkbox"
+        style="@style/Body1.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/green_500"
+        android:text="Plasma"
+
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/faviflu_checkbox" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/tocilizumab_checkbox"
+        style="@style/Body1.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:buttonTint="@color/green_500"
+        android:text="Tocilizumab"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/remdesivir_checkbox" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/other_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Other requirements"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/plasma_checkbox"
+        app:startIconDrawable="@drawable/ic_baseline_list_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/Body1.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/blue_1"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/other_input" />
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/Body1.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/tweets_should_not_have_these_words"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/separator" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/needed_checkbox"
+        style="@style/Body1.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:buttonTint="@color/green_500"
+        android:text="Needed (and its variants)"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/required_checkbox"
+        style="@style/Body1.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:buttonTint="@color/green_500"
+        android:text="Required (and its variants)"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/needed_checkbox" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/search"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="search"
+        android:textColor="@color/white"
+        app:icon="@drawable/ic_baseline_search_24"
+        app:iconGravity="textEnd"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

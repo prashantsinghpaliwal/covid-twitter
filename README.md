@@ -8,8 +8,9 @@ It has two screens - **Search Screen** & **Resources Screen**. On search screen,
 tap on user profiles to directly message the owner of the tweet and also copy paste all data from the app.
 
 ## Built With 🛠
+- [Twitter Api](https://developer.twitter.com/en/docs/twitter-api/tweets/search/quick-start/recent-search)
 - [Kotlin](https://kotlinlang.org/)
-- [RxJava] (https://github.com/ReactiveX/RxKotlin)
+- [RxJava](https://github.com/ReactiveX/RxKotlin)
 - [Android Architecture Components](https://developer.android.com/topic/libraries/architecture)
   - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
    [Dependency Injection](https://developer.android.com/training/dependency-injection) 

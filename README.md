@@ -1,5 +1,5 @@
 # Covid Resources App
-<img src="media/a.jpg" width="200"> <img src="media/b.jpg" width="200">
+<img src="media/screenshot_1.png" width="200"> <img src="media/screenshot_2.png" width="200">
 
 **Covid Resources App** is an app which fetches latest data from twitter about the covid resources like **Oxygen**, **Ventilators** etc . Feel free to create PRs.
 

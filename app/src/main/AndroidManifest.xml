@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.covidtracker">
+    package="com.bigsteptech.covidtracker">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".CovidApp"
+        android:name="com.bigsteptech.covidtracker.CovidApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,9 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CovidTracker">
         <activity
-            android:name=".ui.tweets.TweetActivity"
-            android:parentActivityName=".ui.search.CovidTrackerActivity"/>
-        <activity android:name=".ui.search.CovidTrackerActivity">
+            android:name="com.bigsteptech.covidtracker.ui.tweets.TweetActivity"
+            android:parentActivityName="com.bigsteptech.covidtracker.ui.search.CovidTrackerActivity"/>
+        <activity android:name="com.bigsteptech.covidtracker.ui.search.CovidTrackerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

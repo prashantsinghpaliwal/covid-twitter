@@ -1,27 +1,40 @@
-name : Android Build
+## 1
+name: Test and deploy
 
+## Actions that will be executed when you push code currently none
+on:
+  push:
 
-on: pull_request
-
-
-jobs :
-  build :
-
+## 2             
+jobs:
+  build:
+    needs: [ unit_tests, android_tests ]
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v1
-  
-
-      - name: Set Up JDK
-        uses: actions/setup-java@v1
+      # 1
+      - name: Checkout code
+        uses: actions/checkout@v2
+      # 2
+      - name: Generate Release APK
+        run: ./gradlew assembleRelease
+      # 3
+      - name: Sign APK
+        uses: r0adkll/sign-android-release@v1
+        # ID used to access action output
+        id: sign_app
         with:
-          java-version: 1.8
-
-
-      - name: Run Tests
-        run: ./gradlew test
-
-      - name: Build Project
-        run: ./gradlew assemble
-
+          releaseDirectory: app/build/outputs/apk/release
+          signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+          alias: ${{ secrets.ALIAS }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+      # 4
+      - uses: actions/upload-artifact@master
+        with:
+          name: release.apk
+          path: ${{steps.sign_app.outputs.signedReleaseFile}}
+      # 5
+      - uses: actions/upload-artifact@master
+        with:
+          name: mapping.txt
+          path: app/build/outputs/mapping/release/mapping.txt

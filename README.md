@@ -1,23 +1,14 @@
-# Covid Resources App
-<img src="media/screenshot_1.png" width="200"> <img src="media/screenshot_2.png" width="200">
+# Squad Machine App
 
-**Covid Resources App** is an app which fetches latest data from twitter about the covid resources like **Oxygen**, **Ventilators** etc . Feel free to create PRs.
+
+**Squad Machine App** is an app which shows various squads and members.
 
 ## About
-It has two screens - **Search Screen** & **Resources Screen**. On search screen, users can search for required resources and on other screen, the list will show up. Users can easily share using other apps, 
-tap on user profiles to directly message the owner of the tweet and also copy paste all data from the app.
+It has one screen. In this screen, there is one button on press of which a user rotates the machine and waits to see if squad name matches to that of member name. If that happens, user earns points and winning animation will show up. User has 5 chances after which the game is over and scoring restarts.
 
 ## Built With 🛠
-- [Twitter Api](https://developer.twitter.com/en/docs/twitter-api/tweets/search/quick-start/recent-search)
 - [Kotlin](https://kotlinlang.org/)
-- [RxJava](https://github.com/ReactiveX/RxKotlin)
-- [Android Architecture Components](https://developer.android.com/topic/libraries/architecture)
-  - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
-   [Dependency Injection](https://developer.android.com/training/dependency-injection) 
-  - [Hilt-Dagger](https://dagger.dev/hilt/)
-  - [Hilt-ViewModel](https://developer.android.com/training/dependency-injection/hilt-jetpack)
-- [Retrofit](https://square.github.io/retrofit/)
-- [Material Components for Android](https://github.com/material-components/material-components-android)
+- [Compose](https://github.com/android/compose-samples)
 
 
 ## Architecture
